@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report a Public Issue — CivicTrack</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">CT</span>
+        CivicTrack
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="local.html">Local Tracker</a>
+        <a href="report.html" class="active">Report Issue</a>
+        <a href="reports.html">Reports</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-outline btn-sm">Official Login</a>
+        <a href="report.html" class="btn btn-primary btn-sm">Report Issue</a>
+      </div>
+      <button class="mobile-toggle" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> / <span>Report a Public Issue</span>
+      </div>
+      <h1>Report a Public Issue</h1>
+      <p>Submit a structured report so actions can be tracked. Submission alone does not imply a formal government complaint has been accepted.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container" style="max-width:720px;">
+      <div class="alert alert-warning">
+        <strong>Important:</strong> For urgent safety matters (structural collapse, major water contamination, immediate danger), contact the appropriate emergency or official channel first. This form is for tracked public accountability.
+      </div>
+
+      <div class="card">
+        <form>
+          <div class="form-group">
+            <label for="title">Issue Title *</label>
+            <input type="text" id="title" class="form-control" placeholder="e.g. Broken streetlight near school gate" required>
+          </div>
+
+          <div class="form-group">
+            <label for="description">Description *</label>
+            <textarea id="description" class="form-control" placeholder="Describe the problem in plain language. Include approximate location details." required></textarea>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="category">Category *</label>
+              <select id="category" class="form-control" required>
+                <option value="">Select category</option>
+                <option>Roads</option>
+                <option>Drainage</option>
+                <option>Waste / Sanitation</option>
+                <option>Water Supply</option>
+                <option>Streetlights</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="date">Date Observed *</label>
+              <input type="date" id="date" class="form-control" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="location">Location *</label>
+              <input type="text" id="location" class="form-control" placeholder="Ward, street, landmark..." required>
+            </div>
+            <div class="form-group">
+              <label for="department">Department (if known)</label>
+              <select id="department" class="form-control">
+                <option value="">Not sure</option>
+                <option>Public Works</option>
+                <option>Water Supply</option>
+                <option>Sanitation</option>
+                <option>Electricity / Streetlights</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="attachment">Photo or Document (optional)</label>
+            <input type="file" id="attachment" class="form-control" accept="image/*,.pdf">
+            <p class="form-hint">Max 5 MB. Avoid images that clearly show faces or vehicle plates if privacy is a concern.</p>
+          </div>
+
+          <div class="form-group">
+            <label for="contact">Contact (optional)</label>
+            <input type="text" id="contact" class="form-control" placeholder="Email or phone for follow-up">
+            <p class="form-hint">Your contact details will not be published. Used only if clarification is needed.</p>
+          </div>
+
+          <div class="form-group">
+            <label style="display:flex;align-items:flex-start;gap:0.5rem;font-weight:400;">
+              <input type="checkbox" style="margin-top:0.3rem;" required>
+              <span>I understand this is a public tracking submission and not a formal legal complaint. I consent to the information being used according to the platform data policy.</span>
+            </label>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Submit Issue</button>
+            <a href="track.html" class="btn btn-outline">Already have a tracking ID?</a>
+          </div>
+        </form>
+      </div>
+
+      <p class="text-muted mt-3 text-center" style="font-size:0.85rem;">
+        After submission you will receive a unique Tracking ID. Use it on the <a href="track.html">Track an Issue</a> page to follow progress.
+      </p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border:none;padding:0;">
+        <span>© 2026 CivicTrack. Demo data only.</span>
+        <span>Built for public accountability</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

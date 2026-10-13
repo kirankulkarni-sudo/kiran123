@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Track an Issue — CivicTrack</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">CT</span>
+        CivicTrack
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="local.html">Local Tracker</a>
+        <a href="report.html" class="active">Report Issue</a>
+        <a href="reports.html">Reports</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-outline btn-sm">Official Login</a>
+        <a href="report.html" class="btn btn-primary btn-sm">Report Issue</a>
+      </div>
+      <button class="mobile-toggle" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> / <span>Track an Issue</span>
+      </div>
+      <h1>Track an Issue</h1>
+      <p>Enter your unique tracking ID to see the history of reviews, assignments and actions.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container" style="max-width:800px;">
+      <div class="card mb-3">
+        <div class="form-group" style="margin-bottom:0;">
+          <label for="tracking">Tracking ID</label>
+          <div style="display:flex;gap:0.75rem;">
+            <input type="text" id="tracking" class="form-control" placeholder="e.g. ISS-2026-4412" value="ISS-2026-4412">
+            <button class="btn btn-primary">Search</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sample result -->
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem;">
+          <div>
+            <span class="badge badge-progress">Assigned</span>
+            <h2 class="mt-2">Broken streetlight near school gate</h2>
+            <p class="text-muted">Tracking ID: <strong style="color:var(--white)">ISS-2026-4412</strong></p>
+          </div>
+        </div>
+
+        <div class="detail-meta">
+          <div class="meta-item">
+            <label>Category</label>
+            <strong>Streetlights</strong>
+          </div>
+          <div class="meta-item">
+            <label>Submitted</label>
+            <strong>30 Sep 2026</strong>
+          </div>
+          <div class="meta-item">
+            <label>Location</label>
+            <strong>Ward 12, North District</strong>
+          </div>
+          <div class="meta-item">
+            <label>Assigned To</label>
+            <strong>Public Works – Electrical</strong>
+          </div>
+        </div>
+
+        <h3 class="mt-3 mb-2">Status Timeline</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">30 Sep 2026 · 14:22</div>
+            <div class="timeline-title">Issue submitted</div>
+            <p class="text-muted" style="font-size:0.9rem;">Citizen report received. Photo attached.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">01 Oct 2026 · 09:15</div>
+            <div class="timeline-title">Acknowledged by system</div>
+            <p class="text-muted" style="font-size:0.9rem;">Routed to Public Works department for triage.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">03 Oct 2026 · 11:40</div>
+            <div class="timeline-title">Assigned to field team</div>
+            <p class="text-muted" style="font-size:0.9rem;">Electrical maintenance unit notified. Site visit scheduled.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">08 Oct 2026 · 16:05</div>
+            <div class="timeline-title">Site inspection completed</div>
+            <p class="text-muted" style="font-size:0.9rem;">Pole and fixture confirmed damaged. Replacement ordered.</p>
+          </div>
+        </div>
+
+        <div class="alert alert-info mt-3">
+          Resolution has not yet been reported. You will be able to view supporting evidence once the department updates the record.
+        </div>
+
+        <div class="form-actions">
+          <button class="btn btn-outline btn-sm">Submit Additional Information</button>
+          <button class="btn btn-outline btn-sm">Dispute / Challenge</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border:none;padding:0;">
+        <span>© 2026 CivicTrack. Demo data only.</span>
+        <span>Built for public accountability</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

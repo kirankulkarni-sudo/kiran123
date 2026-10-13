@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Public Reports & Analytics — CivicTrack</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">CT</span>
+        CivicTrack
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="local.html">Local Tracker</a>
+        <a href="report.html">Report Issue</a>
+        <a href="reports.html" class="active">Reports</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-outline btn-sm">Official Login</a>
+        <a href="report.html" class="btn btn-primary btn-sm">Report Issue</a>
+      </div>
+      <button class="mobile-toggle" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> / <span>Public Reports</span>
+      </div>
+      <h1>Public Reports & Analytics</h1>
+      <p>Aggregate statistics that remain traceable to underlying records. Missing or incomplete data is disclosed.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="filters-bar">
+        <div class="filter-group">
+          <label>Period</label>
+          <select class="form-control">
+            <option>Last 12 months</option>
+            <option>Last 6 months</option>
+            <option>2026 YTD</option>
+            <option>All time</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label>Location</label>
+          <select class="form-control">
+            <option>All locations</option>
+            <option>North District</option>
+            <option>East Zone</option>
+            <option>South Block</option>
+            <option>West Ward</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label>Department</label>
+          <select class="form-control">
+            <option>All departments</option>
+            <option>Public Works</option>
+            <option>Health</option>
+            <option>Education</option>
+            <option>Water Supply</option>
+          </select>
+        </div>
+        <div class="filter-group" style="flex:0;">
+          <label>&nbsp;</label>
+          <button class="btn btn-primary">Update</button>
+        </div>
+      </div>
+
+      <!-- Summary stats -->
+      <div class="stats-grid mb-3">
+        <div class="stat-card">
+          <div class="stat-value">1,248</div>
+          <div class="stat-label">Total Projects</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">349</div>
+          <div class="stat-label">Verified Complete</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value red">87</div>
+          <div class="stat-label">Currently Delayed</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">18 days</div>
+          <div class="stat-label">Avg. Verification Time</div>
+        </div>
+      </div>
+
+      <div class="two-col">
+        <div>
+          <h3 class="mb-2">Projects by Status</h3>
+          <div class="chart-placeholder">
+            <div class="bar" style="height:55%;" data-label="Planned"></div>
+            <div class="bar" style="height:90%;" data-label="In Progress"></div>
+            <div class="bar" style="height:40%;background:var(--warning);" data-label="Reported"></div>
+            <div class="bar" style="height:25%;background:var(--red-light);" data-label="Verifying"></div>
+            <div class="bar" style="height:70%;background:var(--success);" data-label="Verified"></div>
+            <div class="bar" style="height:20%;background:#7F1D1D;" data-label="Delayed"></div>
+          </div>
+          <p class="text-muted mt-3" style="font-size:0.85rem;text-align:center;">Illustrative chart · Demo data</p>
+        </div>
+        <div>
+          <h3 class="mb-2">Projects by Department</h3>
+          <div class="card">
+            <table>
+              <thead>
+                <tr>
+                  <th>Department</th>
+                  <th>Total</th>
+                  <th>Verified</th>
+                  <th>Delayed</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Public Works</td>
+                  <td>412</td>
+                  <td>118</td>
+                  <td>31</td>
+                </tr>
+                <tr>
+                  <td>Water Supply</td>
+                  <td>218</td>
+                  <td>67</td>
+                  <td>14</td>
+                </tr>
+                <tr>
+                  <td>Education</td>
+                  <td>195</td>
+                  <td>52</td>
+                  <td>19</td>
+                </tr>
+                <tr>
+                  <td>Health</td>
+                  <td>167</td>
+                  <td>61</td>
+                  <td>8</td>
+                </tr>
+                <tr>
+                  <td>Sanitation</td>
+                  <td>156</td>
+                  <td>51</td>
+                  <td>15</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4">
+        <h3 class="mb-2">Downloadable Datasets</h3>
+        <div class="card">
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
+            <div>
+              <strong>Public Project Snapshot (CSV)</strong>
+              <p class="text-muted" style="font-size:0.9rem;">Last updated: 10 Oct 2026 · Methodology notes included</p>
+            </div>
+            <button class="btn btn-outline btn-sm">Download</button>
+          </div>
+        </div>
+        <div class="card mt-2">
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
+            <div>
+              <strong>Issue Resolution Summary (CSV)</strong>
+              <p class="text-muted" style="font-size:0.9rem;">Last updated: 09 Oct 2026 · Aggregated only</p>
+            </div>
+            <button class="btn btn-outline btn-sm">Download</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="alert alert-info mt-3">
+        All charts and tables link to underlying public records where available. Figures are derived only from records present in the system; incomplete jurisdictions are noted in methodology documentation.
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border:none;padding:0;">
+        <span>© 2026 CivicTrack. Demo data only.</span>
+        <span>Built for public accountability</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

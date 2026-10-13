@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verification Centre — CivicTrack</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">CT</span>
+        CivicTrack
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="local.html">Local Tracker</a>
+        <a href="report.html">Report Issue</a>
+        <a href="reports.html">Reports</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-outline btn-sm">Official Login</a>
+        <a href="report.html" class="btn btn-primary btn-sm">Report Issue</a>
+      </div>
+      <button class="mobile-toggle" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> / <span>Verification Centre</span>
+      </div>
+      <h1>Verification Centre</h1>
+      <p>Transparent standards for reviewing project evidence. Uploads alone are never treated as proof of completion.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="two-col">
+        <div>
+          <h3 class="mb-2">How Verification Works</h3>
+          <p class="mb-3">Authorized reviewers assess submitted evidence against published criteria specific to the project type. Every decision is recorded with a rationale, reviewer role and timestamp.</p>
+
+          <div class="card mb-2">
+            <h4>1. Evidence Submission</h4>
+            <p class="text-muted" style="font-size:0.95rem;">Project teams upload progress or completion evidence linked to milestones.</p>
+          </div>
+          <div class="card mb-2">
+            <h4>2. Checklist Review</h4>
+            <p class="text-muted" style="font-size:0.95rem;">Reviewers apply a project-type-specific checklist (photos, measurements, documents, geo-tags).</p>
+          </div>
+          <div class="card mb-2">
+            <h4>3. Decision</h4>
+            <p class="text-muted" style="font-size:0.95rem;">Approve, reject, or return for additional evidence. Rationale is preserved in the audit log.</p>
+          </div>
+          <div class="card">
+            <h4>4. Public Status</h4>
+            <p class="text-muted" style="font-size:0.95rem;">Verified outcomes and review notes suitable for public release are published.</p>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="mb-2">Status Definitions</h3>
+          <div class="card">
+            <table>
+              <tbody>
+                <tr>
+                  <td><span class="badge badge-reported">Reported Complete</span></td>
+                  <td style="font-size:0.9rem;">Claim submitted; verification pending</td>
+                </tr>
+                <tr>
+                  <td><span class="badge badge-verification">Under Verification</span></td>
+                  <td style="font-size:0.9rem;">Evidence under active review</td>
+                </tr>
+                <tr>
+                  <td><span class="badge badge-verified">Verified Complete</span></td>
+                  <td style="font-size:0.9rem;">Checks passed; decision recorded</td>
+                </tr>
+                <tr>
+                  <td><span class="badge badge-returned">Returned for Evidence</span></td>
+                  <td style="font-size:0.9rem;">Incomplete or needs clarification</td>
+                </tr>
+                <tr>
+                  <td><span class="badge badge-disputed">Disputed</span></td>
+                  <td style="font-size:0.9rem;">Material concern under assessment</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="alert alert-info mt-3">
+            Reviewers require authorized accounts. The public can inspect published verification results and appeal routes on individual project pages.
+          </div>
+        </div>
+      </div>
+
+      <h3 class="mt-4 mb-2">Recently Verified (Public Sample)</h3>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Project</th>
+              <th>Decision</th>
+              <th>Reviewer Role</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="project-details.html">Community Health Centre Expansion</a></td>
+              <td><span class="badge badge-verified">Verified Complete</span></td>
+              <td>Independent Verifier</td>
+              <td>05 Oct 2026</td>
+            </tr>
+            <tr>
+              <td><a href="project-details.html">Drainage Network Cleaning Drive</a></td>
+              <td><span class="badge badge-verified">Verified Complete</span></td>
+              <td>Department Auditor</td>
+              <td>28 Sep 2026</td>
+            </tr>
+            <tr>
+              <td><a href="project-details.html">Anganwadi Centre Renovation</a></td>
+              <td><span class="badge badge-returned">Returned for Evidence</span></td>
+              <td>Independent Verifier</td>
+              <td>02 Oct 2026</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border:none;padding:0;">
+        <span>© 2026 CivicTrack. Demo data only.</span>
+        <span>Built for public accountability</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

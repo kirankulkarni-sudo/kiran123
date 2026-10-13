@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Area Tracker — CivicTrack</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">CT</span>
+        CivicTrack
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="local.html" class="active">Local Tracker</a>
+        <a href="report.html">Report Issue</a>
+        <a href="reports.html">Reports</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-outline btn-sm">Official Login</a>
+        <a href="report.html" class="btn btn-primary btn-sm">Report Issue</a>
+      </div>
+      <button class="mobile-toggle" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> / <span>Local Area Tracker</span>
+      </div>
+      <h1>Local Area Tracker</h1>
+      <p>Discover projects and public issues by geographic area.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="filters-bar">
+        <div class="filter-group" style="flex:1.5;">
+          <label>Location</label>
+          <input type="text" class="form-control" placeholder="State, district, city, ward or village...">
+        </div>
+        <div class="filter-group">
+          <label>Category</label>
+          <select class="form-control">
+            <option value="">All categories</option>
+            <option>Roads</option>
+            <option>Water Supply</option>
+            <option>Sanitation</option>
+            <option>Education</option>
+            <option>Healthcare</option>
+            <option>Streetlights</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label>Status</label>
+          <select class="form-control">
+            <option value="">All statuses</option>
+            <option>In Progress</option>
+            <option>Delayed</option>
+            <option>Verified Complete</option>
+          </select>
+        </div>
+        <div class="filter-group" style="flex:0;">
+          <label>&nbsp;</label>
+          <button class="btn btn-primary">Search Area</button>
+        </div>
+      </div>
+
+      <div class="two-col">
+        <div>
+          <div class="map-placeholder">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+            </svg>
+            <p>Interactive map view</p>
+            <p style="font-size:0.85rem;">Select a marker or use the list to open a record</p>
+          </div>
+          <p class="text-muted mt-2" style="font-size:0.85rem;">Map is illustrative. A full interactive map integration is planned for Phase 4.</p>
+        </div>
+
+        <div>
+          <h3 class="mb-2">North District — Summary</h3>
+          <div class="stats-grid" style="grid-template-columns:1fr 1fr;margin:0 0 1.5rem;">
+            <div class="stat-card" style="padding:1rem;">
+              <div class="stat-value" style="font-size:1.5rem;">42</div>
+              <div class="stat-label">Active Projects</div>
+            </div>
+            <div class="stat-card" style="padding:1rem;">
+              <div class="stat-value red" style="font-size:1.5rem;">9</div>
+              <div class="stat-label">Unresolved Issues</div>
+            </div>
+          </div>
+
+          <h4 class="mb-2">Local Projects</h4>
+          <div class="card mb-2" style="padding:1rem;">
+            <span class="badge badge-progress">In Progress</span>
+            <h4 class="mt-1"><a href="project-details.html">Ward 12 Road Resurfacing</a></h4>
+            <p class="text-muted" style="font-size:0.85rem;">Public Works · Updated 2 days ago</p>
+          </div>
+          <div class="card mb-2" style="padding:1rem;">
+            <span class="badge badge-reported">Reported Complete</span>
+            <h4 class="mt-1"><a href="project-details.html">Solid Waste Transfer Station</a></h4>
+            <p class="text-muted" style="font-size:0.85rem;">Sanitation · Updated yesterday</p>
+          </div>
+          <div class="card mb-2" style="padding:1rem;">
+            <span class="badge badge-verified">Verified Complete</span>
+            <h4 class="mt-1"><a href="project-details.html">Drainage Network Cleaning Drive</a></h4>
+            <p class="text-muted" style="font-size:0.85rem;">Sanitation · Verified 2 weeks ago</p>
+          </div>
+
+          <h4 class="mt-3 mb-2">Unresolved Issues</h4>
+          <div class="card mb-2" style="padding:1rem;">
+            <span class="badge badge-delayed">Open</span>
+            <h4 class="mt-1">Broken streetlight near school gate</h4>
+            <p class="text-muted" style="font-size:0.85rem;">Reported 12 days ago · Tracking ID: ISS-2026-4412</p>
+          </div>
+          <div class="card" style="padding:1rem;">
+            <span class="badge badge-progress">Assigned</span>
+            <h4 class="mt-1">Water logging at Main Market</h4>
+            <p class="text-muted" style="font-size:0.85rem;">Reported 5 days ago · Tracking ID: ISS-2026-4501</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border:none;padding:0;">
+        <span>© 2026 CivicTrack. Demo data only.</span>
+        <span>Built for public accountability</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

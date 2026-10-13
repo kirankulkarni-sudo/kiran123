@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CivicTrack — Government Project Tracker</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">CT</span>
+        CivicTrack
+      </a>
+      <nav class="main-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="local.html">Local Tracker</a>
+        <a href="report.html">Report Issue</a>
+        <a href="reports.html">Reports</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-outline btn-sm">Official Login</a>
+        <a href="report.html" class="btn btn-primary btn-sm">Report Issue</a>
+      </div>
+      <button class="mobile-toggle" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-badge">Public Accountability Platform</span>
+        <h1>Every Public Project.<br><span>Every Action.</span> Accountable.</h1>
+        <p>Track government development projects, inspect supporting evidence, and follow the resolution of public issues. Reported progress is clearly separated from verified progress.</p>
+        <div class="hero-search">
+          <input type="search" id="heroSearch" placeholder="Search by project name, location, department or ID...">
+          <button class="btn btn-primary" onclick="doSearch()">Search</button>
+        </div>
+        <div class="hero-actions">
+          <a href="projects.html" class="btn btn-primary">Explore Projects</a>
+          <a href="track.html" class="btn btn-outline">Track an Issue</a>
+          <a href="reports.html" class="btn btn-outline">View Public Reports</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="stats-grid" id="statsGrid"></div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>How Verification Works</h2>
+        <p>Uploads alone are never treated as proof. Evidence must be reviewed against defined criteria.</p>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-box">
+          <div class="feature-icon">1</div>
+          <h3>Register & Update</h3>
+          <p>Authorized officials register projects and submit progress updates with supporting evidence linked to milestones.</p>
+        </div>
+        <div class="feature-box">
+          <div class="feature-icon">2</div>
+          <h3>Independent Review</h3>
+          <p>Trained verifiers assess evidence against published criteria and record a clear decision with rationale.</p>
+        </div>
+        <div class="feature-box">
+          <div class="feature-icon">3</div>
+          <h3>Publish Outcome</h3>
+          <p>Verified status, rationale and audit history become publicly available. Reported ≠ Verified.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="section-header">
+        <h2>Featured Projects</h2>
+        <p>Recently updated public records</p>
+      </div>
+      <div class="card-grid" id="featuredProjects"></div>
+      <div class="text-center mt-4">
+        <a href="projects.html" class="btn btn-primary">View All Projects</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--gray-900); border-top: 1px solid var(--gray-700); border-bottom: 1px solid var(--gray-700);">
+    <div class="container text-center">
+      <h2>See a problem in your area?</h2>
+      <p class="mt-2 mb-3" style="max-width:520px;margin-left:auto;margin-right:auto;">Report a public issue and receive a tracking ID so you can follow every action taken.</p>
+      <a href="report.html" class="btn btn-primary">Report a Public Issue</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo"><span class="logo-icon">CT</span> CivicTrack</a>
+          <p>Open-source platform for transparent tracking of government projects and public issues.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="projects.html">Projects</a>
+          <a href="local.html">Local Tracker</a>
+          <a href="reports.html">Public Reports</a>
+          <a href="verification.html">Verification Centre</a>
+        </div>
+        <div class="footer-col">
+          <h4>Participate</h4>
+          <a href="report.html">Report an Issue</a>
+          <a href="track.html">Track an Issue</a>
+          <a href="about.html">About & Governance</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="about.html">Open Source</a>
+          <a href="about.html">Data Policy</a>
+          <a href="about.html">Methodology</a>
+          <a href="login.html">Official Login</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 CivicTrack. Demo data only — not live official records.</span>
+        <span>Built for public accountability</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script>
+    function doSearch() {
+      const q = document.getElementById('heroSearch').value.trim();
+      window.location.href = 'projects.html' + (q ? '?q=' + encodeURIComponent(q) : '');
+    }
+    document.getElementById('heroSearch').addEventListener('keydown', e => {
+      if (e.key === 'Enter') doSearch();
+    });
+
+    const stats = CivicTrack.getStats();
+    document.getElementById('statsGrid').innerHTML = `
+      <div class="stat-card"><div class="stat-value">${stats.total}</div><div class="stat-label">Total Projects</div></div>
+      <div class="stat-card"><div class="stat-value">${stats.ongoing}</div><div class="stat-label">Ongoing</div></div>
+      <div class="stat-card"><div class="stat-value red">${stats.delayed}</div><div class="stat-label">Delayed</div></div>
+      <div class="stat-card"><div class="stat-value">${stats.verified}</div><div class="stat-label">Verified Complete</div></div>
+    `;
+
+    const featured = CivicTrack.projects.slice(0, 3);
+    document.getElementById('featuredProjects').innerHTML = featured.map(p => `
+      <div class="card project-card">
+        <span class="badge ${CivicTrack.statusMap[p.status]}">${p.statusLabel}</span>
+        <h3><a href="project-details.html?id=${p.id}">${p.title}</a></h3>
+        <div class="project-meta">
+          <span>📍 ${p.location}</span>
+          <span>🏛 ${p.department}</span>
+          <span>📅 ${p.lastUpdate}</span>
+        </div>
+        <p>${p.summary}</p>
+        <a href="project-details.html?id=${p.id}" class="btn btn-outline btn-sm">View Details</a>
+      </div>
+    `).join('');
+  </script>
+</body>
+</html>

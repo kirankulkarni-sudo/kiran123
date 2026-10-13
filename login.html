@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Official Login — CivicTrack</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">CT</span>
+        CivicTrack
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="local.html">Local Tracker</a>
+        <a href="report.html">Report Issue</a>
+        <a href="reports.html">Reports</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-outline btn-sm">Official Login</a>
+        <a href="report.html" class="btn btn-primary btn-sm">Report Issue</a>
+      </div>
+      <button class="mobile-toggle" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <section class="section" style="flex:1;display:flex;align-items:center;">
+    <div class="container" style="max-width:440px;">
+      <div class="text-center mb-3">
+        <span class="logo-icon" style="width:56px;height:56px;font-size:1.2rem;display:inline-flex;">GP</span>
+        <h1 class="mt-2" style="font-size:1.75rem;">Official Login</h1>
+        <p class="text-muted">Authorized personnel only. Role-based access is enforced.</p>
+      </div>
+
+      <div class="card">
+        <form>
+          <div class="form-group">
+            <label for="email">Official Email / Username</label>
+            <input type="text" id="email" class="form-control" placeholder="you@department.gov" autocomplete="username">
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" class="form-control" placeholder="••••••••" autocomplete="current-password">
+          </div>
+          <div class="form-group" style="display:flex;justify-content:space-between;align-items:center;">
+            <label style="display:flex;align-items:center;gap:0.4rem;font-weight:400;margin:0;">
+              <input type="checkbox"> Remember this device
+            </label>
+            <a href="#" style="font-size:0.9rem;">Forgot password?</a>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;">Sign In</button>
+        </form>
+      </div>
+
+      <div class="alert alert-info mt-3" style="font-size:0.9rem;">
+        This is a demonstration interface. No real authentication is performed. In production, access would be restricted to verified government accounts with multi-factor authentication.
+      </div>
+
+      <p class="text-center mt-3">
+        <a href="index.html">← Return to public portal</a>
+      </p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border:none;padding:0;">
+        <span>© 2026 CivicTrack. Demo data only.</span>
+        <span>Built for public accountability</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
